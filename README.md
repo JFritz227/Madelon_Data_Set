@@ -29,8 +29,29 @@ Your final product will consist of:
 You should do substantive work on at least six subsets of the data. 
 
 - 3 sets of 10% of the data from the UCI Madelon set
+
+    ```
+    -rw-r--r-- 1 jovyan users 3601794 Oct 25 23:30 madelon_test.txt
+    -rw-r--r-- 1 jovyan users    4999 Oct 26 16:30 madelon_train_targets.txt
+    -rw-r--r-- 1 jovyan users 4001993 Oct 26 16:48 madelon_train.txt
+    -rw-r--r-- 1 jovyan users    1499 Oct 26 16:29 madelon_valid_targets.txt
+    -rw-r--r-- 1 jovyan users 1200598 Oct 25 23:31 madelon_valid.txt
+    ```
+    
+    train = 2000 observations
+    validation = 600 observations
+    test = 1800 observations
+    
+    10% train sample = 200 observations
+    10% validation sample = 60 observations
+    10% test sample = 180 observations
+    
 - 3 sets of 10% of the data from the Madelon set made available by your instructors
 
+    90% confidence interval with 1% margin of error for 220,000 observations requires a sample size of 6,525 observations.
+    95% confidence interval with 1% margin of error for 220,000 observations requires a sample size of 9,203 observations.
+    99% confidence interval with 1% margin of error for 220,000 observations requires a sample size of 15,471 observations.
+    
 ##### Prepared Report
 
 Your report should:
@@ -39,6 +60,11 @@ Your report should:
 2. include EDA of each subset 
    - EDA needs may be different depending upon subset or your approach to a solution
 3. present results from Step 1: Benchmarking
+
+    Benchmarked using the average train and test scores from 3 different 10% samples of the small dataset (2000 train, 600 
+    validation). The data entered was both raw and scaled data and the models used were KNeighborsRegressor/Classifier, 
+    DecisionTreeClassifier, RandomForestClassifier, and LogisticRegression.
+    
 4. present results from Step 2: Identify Salient Features
 5. present results from Step 3: Feature Importances
 6. present results from Step 4: Build Model
@@ -59,13 +85,13 @@ Your report should:
 - Build feature selection pipelines using at least three different techniques
 - **NOTE**: these pipelines are being used for feature selection not prediction
 
-##### Jupyter Notebook, Step 3 - Feature Importance
-- Use the results from step 2 to discuss feature importance in the dataset
+##### Jupyter Notebook, Step 3 - Testing Model Pipelines
 - Considering these results, develop a strategy for building a final predictive model
 - recommended approaches:
     - Use feature selection to reduce the dataset to a manageable size then use conventional methods
     - Use dimension reduction to reduce the dataset to a manageable size then use conventional methods
     - Use an iterative model training method to use the entire dataset
+- This notebook should be a "playground" where you try various approaches to solving this problem
    
 ##### Jupyter Notebook, Step 4 - Build Model
 - Implement your final model
@@ -83,4 +109,3 @@ Your report should:
 ### Suggestions
 
 - Document **everything**.
-
