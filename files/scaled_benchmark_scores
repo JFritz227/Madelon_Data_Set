@@ -1,0 +1,3 @@
+,KNeighborsClassifier,DecisionTreeClassifier,RandomForestClassifier,LogisticRegression
+Scaled Train Score,0.8766666666666666,1.0,0.9766666666666666,0.63
+Scaled Test Score,0.7722222222222221,0.6888888888888888,0.6833333333333332,0.5333333333333333
